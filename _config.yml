@@ -1,6 +1,8 @@
 title: Malware Obfuscation Learning
 description: Personal research notes and a small steganography demo (educational)
-theme: jekyll-theme-midnight
+remote_theme: pages-themes/midnight@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
 baseurl: ""       # leave blank for root
 url: ""           # set only if you add a custom domain
 
