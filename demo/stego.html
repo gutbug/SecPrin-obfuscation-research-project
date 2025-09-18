@@ -118,14 +118,78 @@ embedBtn.addEventListener('click', () => {
 });
 </script>
 
+<hr>
+<h2>Extract hidden text from an image</h2>
 
-  <h2>Extract text from an image</h2>
-  <label>Choose image: <input id="extractImg" type="file" accept="image/png" /></label>
-  <button id="extractBtn">Extract text</button>
-  <pre id="output" style="white-space:pre-wrap; background:#f6f6f6; padding:.6rem; border-radius:6px;"></pre>
+<label>
+  Choose PNG with hidden message:
+  <input id="extractImg" type="file" accept="image/png" />
+</label>
+<br><br>
 
-  <canvas id="c"></canvas>
+<button id="extractBtn">Extract text</button>
+<br><br>
 
-  <script src="/demo/stego.js"></script>
+<label>
+  Extracted text:
+  <textarea id="extractedText" rows="4" cols="40" readonly></textarea>
+</label>
+
+<canvas id="extractCanvas" style="display:none;"></canvas>
+
+<script>
+const extractInput = document.getElementById('extractImg');
+const extractBtn = document.getElementById('extractBtn');
+const extractOutput = document.getElementById('extractedText');
+const extractCanvas = document.getElementById('extractCanvas');
+const extractCtx = extractCanvas.getContext('2d');
+
+let stegoImg = new Image();
+
+// Load selected image into canvas
+extractInput.addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    stegoImg.onload = () => {
+      extractCanvas.width = stegoImg.width;
+      extractCanvas.height = stegoImg.height;
+      extractCtx.drawImage(stegoImg, 0, 0);
+    };
+    stegoImg.src = ev.target.result;
+  };
+  reader.readAsDataURL(file);
+});
+
+// Extract bits until we hit terminator (00000000)
+function extractLSB(imageData) {
+  const data = imageData.data;
+  let bits = [];
+  for (let i = 0; i < data.length; i += 4) {
+    bits.push(data[i + 2] & 1); // blue channel LSB
+  }
+
+  let chars = [];
+  for (let i = 0; i < bits.length; i += 8) {
+    const byte = bits.slice(i, i + 8).join('');
+    if (byte === '00000000') break; // terminator
+    chars.push(String.fromCharCode(parseInt(byte, 2)));
+  }
+  return chars.join('');
+}
+
+extractBtn.addEventListener('click', () => {
+  if (!stegoImg.src) {
+    alert("Please choose a stego PNG first.");
+    return;
+  }
+
+  let imgData = extractCtx.getImageData(0, 0, extractCanvas.width, extractCanvas.height);
+  let hiddenMessage = extractLSB(imgData);
+
+  extractOutput.value = hiddenMessage || "(No hidden message found)";
+});
+</script>
 </body>
 </html>
