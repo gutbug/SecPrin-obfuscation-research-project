@@ -10,4 +10,4 @@ This site is for **personal educational research**. It includes conceptual notes
 **Legal / Ethical Notice:**  
 This site is for educational purposes only. Do **not** use the materials here for illegal activity. All code samples are non-actionable and designed for learning in isolated environments.
 
-- [Steganography demo](/demo/stego.html)
+- [Steganography demo](https://gutbug.github.io/SecPrin-obfuscation-research-project/demo/stego.html)
