@@ -14,10 +14,110 @@
   <h1>Client-side Steganography Demo</h1>
   <p>This demo hides short text inside a PNG image's pixels using the least-significant-bit (LSB) method. All processing happens in your browser — no files are uploaded.</p>
 
-  <h2>Embed text into an image</h2>
-  <label>Choose cover PNG image (RGB): <input id="embedImg" type="file" accept="image/png" /></label>
-  <label>Text to hide (max ~500 chars): <textarea id="embedText" rows="4"></textarea></label>
-  <button id="embedBtn">Embed & download PNG</button>
+<h2>Embed text into an image</h2>
+
+<label>
+  Choose cover PNG image (RGB): 
+  <input id="embedImg" type="file" accept="image/png" />
+</label>
+<br><br>
+
+<label>
+  Text to hide (max ~500 chars): 
+  <textarea id="embedText" rows="4" cols="40"></textarea>
+</label>
+<br><br>
+
+<button id="embedBtn">Embed & download PNG</button>
+<a id="downloadLink" style="display:none; margin-left:10px;"></a>
+
+<canvas id="embedCanvas" style="display:none;"></canvas>
+
+<script>
+const fileInput = document.getElementById('embedImg');
+const textInput = document.getElementById('embedText');
+const embedBtn = document.getElementById('embedBtn');
+const downloadLink = document.getElementById('downloadLink');
+const canvas = document.getElementById('embedCanvas');
+const ctx = canvas.getContext('2d');
+
+let coverImg = new Image();
+
+// Load the chosen image into a hidden canvas
+fileInput.addEventListener('change', e => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    coverImg.onload = () => {
+      canvas.width = coverImg.width;
+      canvas.height = coverImg.height;
+      ctx.drawImage(coverImg, 0, 0);
+    };
+    coverImg.src = ev.target.result;
+  };
+  reader.readAsDataURL(file);
+});
+
+// Convert text to array of bits
+function textToBits(text) {
+  let bits = [];
+  for (let i = 0; i < text.length; i++) {
+    let charCode = text.charCodeAt(i);
+    for (let bit = 7; bit >= 0; bit--) {
+      bits.push((charCode >> bit) & 1);
+    }
+  }
+  // Add a terminator (8 zero bits) to signal end
+  bits.push(...Array(8).fill(0));
+  return bits;
+}
+
+// Embed text bits into the LSB of the blue channel
+function embedLSB(imageData, message) {
+  const bits = textToBits(message);
+  const data = imageData.data;
+
+  let bitIndex = 0;
+  for (let i = 0; i < data.length && bitIndex < bits.length; i += 4) {
+    // Blue channel is at i+2
+    data[i + 2] = (data[i + 2] & 0xFE) | bits[bitIndex];
+    bitIndex++;
+  }
+
+  if (bitIndex < bits.length) {
+    alert("Message is too long for this image!");
+    return null;
+  }
+  return imageData;
+}
+
+embedBtn.addEventListener('click', () => {
+  if (!coverImg.src) {
+    alert("Please choose a PNG image first.");
+    return;
+  }
+
+  const message = textInput.value.trim();
+  if (!message) {
+    alert("Enter some text to hide.");
+    return;
+  }
+
+  let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const stegoData = embedLSB(imgData, message);
+  if (!stegoData) return;
+
+  ctx.putImageData(stegoData, 0, 0);
+
+  // Make download link
+  downloadLink.href = canvas.toDataURL("image/png");
+  downloadLink.download = "stego.png";
+  downloadLink.textContent = "Download stego image";
+  downloadLink.style.display = "inline-block";
+});
+</script>
+
 
   <h2>Extract text from an image</h2>
   <label>Choose image: <input id="extractImg" type="file" accept="image/png" /></label>
