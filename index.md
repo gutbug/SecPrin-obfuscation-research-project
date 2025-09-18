@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Home
 ---
 
 # Malware Obfuscation — Research Notes
