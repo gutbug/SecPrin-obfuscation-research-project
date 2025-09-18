@@ -1,5 +1,6 @@
 title: Malware Obfuscation Learning
 description: Personal research notes and a small steganography demo (educational)
+theme: jekyll-theme-midnight
 baseurl: ""       # leave blank for root
 url: ""           # set only if you add a custom domain
 
