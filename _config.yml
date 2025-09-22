@@ -1,3 +1,6 @@
 title: Malware Obfuscation Learning
 description: Personal research notes and a small steganography demo (educational)
 theme: jekyll-theme-midnight
+
+baseurl: "/SecPrin-obfuscation-research-project"
+url: "https://gutbug.github.io"
