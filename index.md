@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Malware Obfuscation — Research Notes
+# Hidden in Plain Sight - An Overview of Malware Obfuscation
 
 This site is for **personal educational research**. It includes conceptual notes and a small **client-side** steganography demo that runs entirely in your browser.
 
