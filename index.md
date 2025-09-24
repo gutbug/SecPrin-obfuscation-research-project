@@ -21,7 +21,4 @@ This site is for educational purposes only. Do **not** use the materials here fo
 
 [Steganography demo](https://gutbug.github.io/SecPrin-obfuscation-research-project/demo/stego.html)
 
-**Obfuscation Detection Methods**
-
-
 **Key Takeaways and Further Reading**
