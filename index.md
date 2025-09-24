@@ -12,6 +12,11 @@ This site is for educational purposes only. Do **not** use the materials here fo
 
 *Software Packing*
 
+*Encrypted/encoded Files or Strings*
+
+*Command/Script Obfuscation*
+
+
 **Steganography**
 
 [Steganography demo](https://gutbug.github.io/SecPrin-obfuscation-research-project/demo/stego.html)
