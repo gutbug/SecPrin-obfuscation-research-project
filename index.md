@@ -10,6 +10,7 @@ This site is for educational purposes only. Do **not** use the materials here fo
 
 **Three Common Methods of Obfuscation**
 
+*Software Packing*
 
 **Steganography**
 
@@ -18,3 +19,4 @@ This site is for educational purposes only. Do **not** use the materials here fo
 **Obfuscation Detection Methods**
 
 
+**Key Takeaways and Further Reading**
