@@ -1,5 +1,5 @@
-title: Malware Obfuscation Learning
-description: Personal research notes and a small steganography demo (educational)
+title: Malware Obfuscation
+description: An overview of how adversaries attempt to hide malicious content and avoid detection.
 remote_theme: pages-themes/slate@v0.2.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
