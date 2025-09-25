@@ -29,7 +29,7 @@ Steganography is the concealment of information within a different representatio
 
 <p>
   <img src="https://github.com/gutbug/SecPrin-obfuscation-research-project/blob/main/images/c62588eb7353-article-200206-steganography-example.png" alt="Hidden data in image" width="400" height="200"> 
-  <em>Dickson 2020</em>
+  <span class="text-center italic"><a href=https://portswigger.net/daily-swig/what-is-steganography-a-complete-guide-to-the-ancient-art-of-concealing-messages>portswigger.net, Dickson 2020</a></span>
 </p>
 
 The linked demonstration is a **client-side** script that will take a PNG format image and hide, or extract, a text string utilising the least significant bits (LSB) method, specifically the blue channel (of the RGB data). If you wish to validate that it actually alters the image, feel free to hash the output image files.
