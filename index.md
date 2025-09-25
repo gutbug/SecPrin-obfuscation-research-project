@@ -14,11 +14,16 @@ This site is for educational purposes only. Do **not** use the materials here fo
 
 **Three Common Methods of Obfuscation**
 
-*Software Packing*
+*Software Packing (T1027.002)*
 
-*Encrypted/encoded Files or Strings*
 
-*Command/Script Obfuscation*
+
+*Command/Script Obfuscation (T1027.010)*
+
+
+
+*Encrypted/encoded Files or Strings (T1027.013)*
+
 
 
 ***
