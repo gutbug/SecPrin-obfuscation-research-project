@@ -28,7 +28,7 @@ This site is for educational purposes only. Do **not** use the materials here fo
 Steganography is the concealment of information within a different representation, a historic example is the shaving of a greek servant's head to tattoo a message on their scalp and hide it under their regrown hair. In the digital context, this can be seen with malicious contents being hidden in files such as pictures, documents, or program macros (as seen in the methods above), that to the human eye or surface-level analysis appear benign.
 
 <figure>
-  <img src="https://github.com/gutbug/SecPrin-obfuscation-research-project/blob/main/images/c62588eb7353-article-200206-steganography-example.png" alt="Steganography hides data in plain sight, image missing" height="200px" width="400px">
+  <img src="https://github.com/gutbug/SecPrin-obfuscation-research-project/main/images/c62588eb7353-article-200206-steganography-example.png" alt="Steganography hides data in plain sight, image missing" height="200px" width="400px">
   <figcaption>Steganography hides data in plain sight (Dickson, 2020)</figcaption>
 </figure>
 <br/><br/>
