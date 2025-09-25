@@ -7,7 +7,8 @@ This site is for educational purposes only. Do **not** use the materials here fo
 
 ***
 
-**What is Malware Obfuscation?**
+**What is Malware Obfuscation? ([T1027](https://attack.mitre.org/techniques/T1027/))**
+
 
 
 ***
@@ -28,7 +29,7 @@ This site is for educational purposes only. Do **not** use the materials here fo
 
 ***
 
-**Steganography**
+**Steganography ([T1027.003](https://attack.mitre.org/techniques/T1027/003/))**
 
 Steganography is the concealment of information within a different representation, a historic example is the shaving of a greek servant's head to tattoo a message on their scalp and hide it under their regrown hair. In the digital context, this can be seen with malicious contents being hidden in files such as pictures, documents, or program macros (as seen in the methods above), that to the human eye or surface-level analysis appear benign.
 
