@@ -27,7 +27,7 @@ This site is for educational purposes only. Do **not** use the materials here fo
 
 Steganography is the concealment of information within a different representation, a historic example is the shaving of a greek servant's head to tattoo a message on their scalp and hide it under their regrown hair. In the digital context, this can be seen with malicious contents being hidden in files such as pictures, documents, or program macros (as seen in the methods above), that to the human eye or surface-level analysis appear benign.
 
-![Dickson, 2020](https://github.com/gutbug/SecPrin-obfuscation-research-project/blob/main/images/c62588eb7353-article-200206-steganography-example.png){height=50% width=50%}
+<img src="https://github.com/gutbug/SecPrin-obfuscation-research-project/blob/main/images/c62588eb7353-article-200206-steganography-example.png" alt="Dickson 2020" width="400" height="200">
 
 The linked demonstration is a **client-side** script that will take a PNG format image and hide, or extract, a text string utilising the least significant bits (LSB) method, specifically the blue channel (of the RGB data). If you wish to validate that it actually alters the image, feel free to hash the output image files.
 
