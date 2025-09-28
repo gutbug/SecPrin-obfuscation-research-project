@@ -13,17 +13,17 @@ This site is for educational purposes only. Do **not** use the materials here fo
 
 ***
 
-**Three Common Methods of Obfuscation**
+<ins>**Three Common Methods of Obfuscation**</ins>
 
-*Software Packing ([T1027.002](https://attack.mitre.org/techniques/T1027/002/))*
-
-
-
-*Command/Script Obfuscation ([T1027.010](https://attack.mitre.org/techniques/T1027/010/))*
+**Software Packing ([T1027.002](https://attack.mitre.org/techniques/T1027/002/))**
 
 
 
-*Encrypted/encoded Files or Strings ([T1027.013](https://attack.mitre.org/techniques/T1027/013/))*
+**Command/Script Obfuscation ([T1027.010](https://attack.mitre.org/techniques/T1027/010/))**
+
+
+
+**Encrypted/encoded Files or Strings ([T1027.013](https://attack.mitre.org/techniques/T1027/013/))**
 
 
 
