@@ -32,7 +32,7 @@ The [Emotet malware](https://www.fortinet.com/blog/threat-research/deep-dive-int
 
 **Command/Script Obfuscation ([T1027.010](https://attack.mitre.org/techniques/T1027/010/))**
 
-This method is concerned with making command lines within a payload confusing to analyse and detect, whilst retaining its intended function. This is achieved through the addition of strategically placed characters, complex directory redirections, and encoding of strings through means like base64, similar to what is explored below.
+This method is concerned with making command lines within a payload confusing to analyse and detect, whilst retaining its intended function. This is achieved through the addition of strategically placed characters, complex directory redirections, and encoding of strings through means like base64 which is a method seen in many attack examples on the [MITRE ATT&CK](https://attack.mitre.org/techniques/T1027/010/) page.
 
 
 
