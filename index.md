@@ -34,9 +34,12 @@ The [Emotet malware](https://www.fortinet.com/blog/threat-research/deep-dive-int
 
 This method is concerned with making command lines within a payload confusing to analyse and detect, whilst retaining its intended function. This is achieved through the addition of strategically placed characters, complex directory redirections, and encoding of strings through means like base64 which is a method seen in many attack examples on the [MITRE ATT&CK](https://attack.mitre.org/techniques/T1027/010/) page.
 
+<div style="text-align: center;">
+  <img src="./images/fruitfly_perl.png" alt="FruitFly Perl script image missing" height="75%" width="75%">
+  <p><em>The FruitFly MacOS backdoor Perl script that is believed to have been persistent for over a decade.</em></p>
+</div>
 
-
-FruitFly is a MacOS backdoor used for physically spying on Mac users via webcam. One of it's main components is the storage of obfuscated Perl scripts that make up the peristent component of the malware, allowing remote access to the infected machine by the adversary.
+FruitFly is a MacOS backdoor used for physically spying on Mac users via webcam. One of it's main components is the storage of obfuscated Perl scripts that make up the peristent component of the malware, allowing remote access to the infected machine by the adversary, and is believed to have persisted for over a decade.
 
 **Encrypted/encoded Files or Strings ([T1027.013](https://attack.mitre.org/techniques/T1027/013/))**
 
