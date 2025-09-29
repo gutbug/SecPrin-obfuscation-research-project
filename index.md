@@ -43,13 +43,18 @@ FruitFly is a MacOS backdoor used for physically spying on Mac users via webcam.
 
 **Encrypted/encoded Files or Strings ([T1027.013](https://attack.mitre.org/techniques/T1027/013/))**
 
+Adversaries encrypt/encode files or parts of them to mask the presence of possible malware signatures, sharing the same broad objective as the above techniques and other defense evasion sub-techniques. These files can be masked with custom encryption, standard encoding systems like Base64, or with a combination of other obfuscation techniques. Malicious files that enter a system undetected can remain encoded until specified conditions are met and linked scripts activate to decode and run the malicious components.
+
+
+
+The Shlayer Malware is a malicious installer program targeting MacOS machines. It contains an encoded blob of code within the i
 
 
 ***
 
 <ins>**Steganography ([T1027.003](https://attack.mitre.org/techniques/T1027/003/))**</ins>
 
-Steganography is the concealment of information within a different representation, a historic example is the shaving of a greek servant's head to tattoo a message on their scalp and hide it under their regrown hair. In the digital context, this can be seen with malicious contents being hidden in files such as pictures, documents, or program macros (as seen in the methods above), that to the human eye or surface-level analysis appear benign.
+Steganography is the concealment of information within a different representation, a classic historic example is the shaving of a greek servant's head to tattoo a message on their scalp and hide it under their regrown hair. In the digital context, this can be seen with malicious contents being hidden in files such as pictures, documents, or program macros (as seen in the methods above), that to the human eye or surface-level analysis appear benign.
 
 <div style="text-align: center;">
   <img src="./images/c62588eb7353-article-200206-steganography-example.png" alt="Steganography image missing" height="75%" width="75%">
@@ -58,7 +63,7 @@ Steganography is the concealment of information within a different representatio
 
 The linked demonstration is a **client-side** script that will take a PNG format image and hide, or extract, a text string utilising the least significant bits (LSB) method, specifically the blue channel (of the RGB data). If you wish to validate that it actually alters the image, feel free to hash the output image files.
 
-[Steganography demo](https://gutbug.github.io/SecPrin-obfuscation-research-project/demo/stego.html)
+**[Steganography demo](https://gutbug.github.io/SecPrin-obfuscation-research-project/demo/stego.html)**
 
 ***
 
