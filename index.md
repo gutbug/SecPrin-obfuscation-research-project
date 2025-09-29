@@ -32,7 +32,11 @@ The [Emotet malware](https://www.fortinet.com/blog/threat-research/deep-dive-int
 
 **Command/Script Obfuscation ([T1027.010](https://attack.mitre.org/techniques/T1027/010/))**
 
+This method is concerned with making command lines within a payload confusing to analyse and detect, whilst retaining its intended function. This is achieved through the addition of strategically placed characters, complex directory redirections, and encoding of strings through means like base64, similar to what is explored below.
 
+
+
+FruitFly is a MacOS backdoor used for physically spying on Mac users via webcam. One of it's main components is the storage of obfuscated Perl scripts that make up the peristent component of the malware, allowing remote access to the infected machine by the adversary.
 
 **Encrypted/encoded Files or Strings ([T1027.013](https://attack.mitre.org/techniques/T1027/013/))**
 
