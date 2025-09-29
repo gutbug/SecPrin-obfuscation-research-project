@@ -22,7 +22,7 @@ For adversaries to introduce their malware into a target system, they must attem
 After making a new malware program, adversaries will consider having it enter a system without being recognised by antivirus signatures. Software packing is performed by making the program, or components of it, smaller through compression using pre-existing or custom packing programs such as [UPX](https://upx.github.io/). Once in a system, payloads are commonly unpacked in memory and are not detected until the executable is running.
 
 <figure style="text-align: center;">
-  <img src="{{ './images/UPX.png'}}" alt="UPX image missing">
+  <img src="{{ './images/UPX.png' | relative_url}}" alt="UPX image missing">
   <figcaption>UPX is an easily accessed software packing program</figcaption>
 </figure> 
 
