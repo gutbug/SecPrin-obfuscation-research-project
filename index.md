@@ -75,4 +75,4 @@ The linked demonstration is a **client-side** script that will take a PNG format
 
 **Key Takeaways and Further Reading**
 
-This page has explored only a select few of the obfuscation techniques that have been seen. These are used as part of sophisticated adversary attacks and are continuously being updated, changed and reimagined, keeping defenders constantly in motion, attempting to keep detection and defense methodologies up to par.  
+This page has explored only a select few of the obfuscation techniques that have been seen. These are used as part of sophisticated adversary attacks and are continuously being updated, changed and reimagined, keeping defenders constantly in motion, attempting to keep detection and defense methodologies up to par. To effectively combat these expansive techniques, defense methods must be adaptable and layered. If you would like to learn about more of these defense evasion techniques, their technical details or more of the tactics and techniques that adversaries employ, I would recommend going to the [MITRE ATT&CK](https://attack.mitre.org/) site. 
