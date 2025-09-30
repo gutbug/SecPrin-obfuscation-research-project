@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h4><ins>**Legal / Ethical Notice:**</ins></h4>  
+<ins>**<h4>Legal / Ethical Notice:</h4>**</ins>  
 
 This site is for educational purposes only. Do **not** use the materials here for illegal activity. All code samples are non-actionable and designed for learning in isolated environments.
 
