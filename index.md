@@ -46,7 +46,7 @@ FruitFly is a MacOS backdoor used for physically spying on Mac users via webcam.
 Adversaries encrypt/encode files or parts of them to mask the presence of possible malware signatures, sharing the same broad objective as the above techniques and other defense evasion sub-techniques. These files can be masked with custom encryption, standard encoding systems like Base64, or with a combination of other obfuscation techniques. Malicious files that enter a system undetected can remain encoded until specified conditions are met and linked scripts activate to decode and run the malicious components.
 
 <div style="text-align: center;">
-  <img src="./images/shlayer.png" alt="encrypted/encoded payload delivery image missing" height="75%" width="75%">
+  <img src="./images/shlayer.png" alt="encrypted/encoded payload delivery image missing" height="90%" width="90%">
   <p><em>This is an overview of the process an encrypted/encoded payload can follow, like what the Shlayer malware below follows</em></p>
 </div>
 
