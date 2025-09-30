@@ -17,9 +17,9 @@ For adversaries to introduce their malware into a target system, they must attem
 
 ***
 
-<h3>Three Common Methods of Obfuscation</h3>
+<h3>Three Common Methods of Obfuscation</h3>  
 
-<h4>Software Packing<h/4> 
+<h4>Software Packing</h4>  
 
 After making a new malware program, adversaries will consider having it enter a system without being recognised by antivirus signatures. Software packing is performed by making the program, or components of it, smaller through compression using pre-existing or custom packing programs such as [UPX](https://upx.github.io/). Once in a system, payloads are commonly unpacked in memory and are not detected until the executable is running.
 
