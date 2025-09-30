@@ -65,8 +65,7 @@ Steganography is the concealment of information within a different representatio
 The linked demonstration is a **client-side** script that will take a PNG format image and hide, or extract, a text string utilising the least significant bits (LSB) method, specifically the blue channel (of the RGB data). As a proof of operation, see the following terminal screenshot dipalying the hash values of an image in it's original form and with two different messages.
 
 <div style="text-align: center;">
-  <img src="./images/hashes.png" alt="hash values image missing" height="90%" width="90%">
-  <p><em>Hash values for an unaltered PNG image and with two different embedded messages</em></p>
+  <img src="./images/hashes.png" alt="hash values image missing" height="100%" width="100%"><p><em>Hash values for an unaltered PNG image and with two different embedded messages</em></p>
 </div>
 
 
