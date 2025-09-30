@@ -62,7 +62,7 @@ Steganography is the concealment of information within a different representatio
 <iframe width="686" height="386" src="https://www.youtube.com/embed/TWEXCYQKyDc" title="Secrets Hidden in Images (Steganography) - Computerphile" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-The linked demonstration is a **client-side** script that will take a PNG format image and hide, or extract, a text string utilising the least significant bits (LSB) method, specifically the blue channel (of the RGB data). As a proof of operation, see the following terminal screenshot dipalying the hash values of an image in it's original form and with two different messages.
+The linked demonstration is a **client-side** script that will take a PNG format image and hide, or extract, a text string utilising the least significant bits (LSB) method, specifically the blue channel (of the RGB data). As a proof of operation, see the following terminal screenshot displaying the hash values of an image in it's original form and with two different messages.
 
 <div style="text-align: center;">
   <img src="./images/hashes.png" alt="hash values image missing" height="100%" width="100%"><p><em>Hash values for an unaltered PNG image and with two different embedded messages</em></p>
@@ -74,3 +74,5 @@ The linked demonstration is a **client-side** script that will take a PNG format
 ***
 
 **Key Takeaways and Further Reading**
+
+This page has explored only a select few of the obfuscation techniques that have been seen. These are used as part of sophisticated adversary attacks and are continuously being updated, changed and reimagined, keeping defenders constantly in motion, attempting to keep detection and defense methodologies up to par.  
