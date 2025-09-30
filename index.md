@@ -8,7 +8,7 @@ This site is for educational purposes only. Do **not** use the materials here fo
 
 ***
 
-<h3>What is Malware Obfuscation?</h3>  ([T1027](https://attack.mitre.org/techniques/T1027/))
+<h3>What is Malware Obfuscation?</h3>  
 
 For adversaries to introduce their malware into a target system, they must attempt to bypass detection systems that are becoming more commonplace and sophisticated. Obfuscation is the act of making their payload appear differently in order bypass these systems, whether in the files entirety or sections that would be more easily discovered. There is a number of ways that adversaries can carry this out, and more are being developed constantly, a database is maintained by [MITRE ATT&CK](https://attack.mitre.org/techniques/T1027/) and these obfuscation methods are just some of the ways that defense systems are evaded.  
 
@@ -19,7 +19,7 @@ For adversaries to introduce their malware into a target system, they must attem
 
 <h3>Three Common Methods of Obfuscation</h3>
 
-<h4>Software Packing<h/4>  ([T1027.002](https://attack.mitre.org/techniques/T1027/002/))
+<h4>Software Packing<h/4> 
 
 After making a new malware program, adversaries will consider having it enter a system without being recognised by antivirus signatures. Software packing is performed by making the program, or components of it, smaller through compression using pre-existing or custom packing programs such as [UPX](https://upx.github.io/). Once in a system, payloads are commonly unpacked in memory and are not detected until the executable is running.
 
@@ -30,7 +30,7 @@ After making a new malware program, adversaries will consider having it enter a 
 
 The [Emotet malware](https://www.fortinet.com/blog/threat-research/deep-dive-into-emotet-malware) utilises software packing as part of it's attack, delivered through a malicious word document payload. Once the macro is executed, it downloads a custom packed payload and begins the malware infection to leave a persistent payload.
 
-<h4>Command/Script Obfuscation ([T1027.010](https://attack.mitre.org/techniques/T1027/010/))</h4>
+<h4>Command/Script Obfuscation</h4>
 
 This method is concerned with making command lines within a payload confusing to analyse and detect, whilst retaining its intended function. This is achieved through the addition of strategically placed characters, complex directory redirections, and encoding of strings through means like base64 which is a method seen in many attack examples on the [MITRE ATT&CK](https://attack.mitre.org/techniques/T1027/010/) page.
 
@@ -41,7 +41,7 @@ This method is concerned with making command lines within a payload confusing to
 
 FruitFly is a MacOS backdoor used for physically spying on Mac users via webcam. One of it's main components is the storage of obfuscated Perl scripts that make up the peristent component of the malware, allowing remote access to the infected machine by the adversary, and is believed to have persisted for over a decade.
 
-<h4>Encrypted/encoded Files or Strings ([T1027.013](https://attack.mitre.org/techniques/T1027/013/))</h4>
+<h4>Encrypted/encoded Files or Strings</h4>
 
 Adversaries encrypt/encode files or parts of them to mask the presence of possible malware signatures, sharing the same broad objective as the above techniques and other defense evasion sub-techniques. These files can be masked with custom encryption, standard encoding systems like Base64, or with a combination of other obfuscation techniques. Malicious files that enter a system undetected can remain encoded until specified conditions are met and linked scripts activate to decode and run the malicious components.
 
@@ -55,7 +55,7 @@ The Shlayer Malware is a malicious installer program targeting MacOS machines. I
 
 ***
 
-<h3>Steganography ([T1027.003](https://attack.mitre.org/techniques/T1027/003/))</h3>
+<h3>Steganography</h3>
 
 Steganography is the concealment of information within a different representation, a classic historic example is the shaving of a greek servant's head to tattoo a message on their scalp and hide it under their regrown hair. In the digital context, this can be seen with malicious contents being hidden in files such as pictures, documents, or program macros (as seen in the methods above), that to the human eye or surface-level analysis appear benign.
 
