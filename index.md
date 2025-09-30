@@ -62,7 +62,13 @@ Steganography is the concealment of information within a different representatio
 <iframe width="686" height="386" src="https://www.youtube.com/embed/TWEXCYQKyDc" title="Secrets Hidden in Images (Steganography) - Computerphile" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-The linked demonstration is a **client-side** script that will take a PNG format image and hide, or extract, a text string utilising the least significant bits (LSB) method, specifically the blue channel (of the RGB data). If you wish to validate that it actually alters the image, feel free to hash the output image files.
+The linked demonstration is a **client-side** script that will take a PNG format image and hide, or extract, a text string utilising the least significant bits (LSB) method, specifically the blue channel (of the RGB data). As a proof of operation, see the following terminal screenshot dipalying the hash values of an image in it's original form and with two different messages.
+
+<div style="text-align: center;">
+  <img src="./images/hashes.png" alt="hash values image missing" height="90%" width="90%">
+  <p><em>Hash values for an unaltered PNG image and with two different embedded messages</em></p>
+</div>
+
 
 **[Steganography demo](https://gutbug.github.io/SecPrin-obfuscation-research-project/demo/stego.html)**
 
